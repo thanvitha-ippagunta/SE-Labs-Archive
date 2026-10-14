@@ -1,0 +1,30 @@
+Command: python -m unittest discover -s tests -v
+
+test_bad_expiry_fails_closed (test_parking_system.ParkingSystemTests.test_bad_expiry_fails_closed) ... ok
+test_bad_json_keeps_existing_data (test_parking_system.ParkingSystemTests.test_bad_json_keeps_existing_data) ... ok
+test_database_round_trip (test_parking_system.ParkingSystemTests.test_database_round_trip) ... ok
+test_expiry_today_is_valid (test_parking_system.ParkingSystemTests.test_expiry_today_is_valid) ... ok
+test_invalid_records_not_restored (test_parking_system.ParkingSystemTests.test_invalid_records_not_restored) ... Skipping invalid saved permit for ''
+Skipping invalid saved permit for 'BAD'
+ok
+test_missing_database_clears_registry (test_parking_system.ParkingSystemTests.test_missing_database_clears_registry) ... ok
+test_no_duplicate_expiry_reset (test_parking_system.ParkingSystemTests.test_no_duplicate_expiry_reset) ... ok
+test_registration_normalizes_and_records (test_parking_system.ParkingSystemTests.test_registration_normalizes_and_records) ... ok
+test_reject_bad_expiry_update (test_parking_system.ParkingSystemTests.test_reject_bad_expiry_update) ... ok
+test_reject_invalid_registration (test_parking_system.ParkingSystemTests.test_reject_invalid_registration) ... Registration rejected: Vehicle plate must be a nonempty string.
+Registration rejected: Vehicle plate must be a nonempty string.
+Registration rejected: invalid zone 'Z'
+ok
+test_revoke_existing_and_missing (test_parking_system.ParkingSystemTests.test_revoke_existing_and_missing) ... ok
+test_scan_flags_wrong_zone_or_missing (test_parking_system.ParkingSystemTests.test_scan_flags_wrong_zone_or_missing) ... ok
+test_zone_records_default_not_shared (test_parking_system.ParkingSystemTests.test_zone_records_default_not_shared) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.007s
+
+OK
+
+Command: python -m py_compile parking_system.py
+Result: PASSED
+
+NOTE: Pylint, Bandit, and Flake8 must be run locally using RUN_ANALYSIS.md; their reports are not included or simulated.
